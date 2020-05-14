@@ -1,0 +1,167 @@
+/* Listing component prototype */
+ul.listing {
+	margin: 0 0 $element-margin 0;
+	padding-left: 0;
+
+	> li.listing-item {
+		border-bottom: 1px solid $border-color;
+		display: flex;
+		flex-flow: row wrap;
+		padding: $box-padding 0;
+		align-items: center;
+
+		> div.listing-item-thumbnail {
+			padding-right: ($grid-gutter * 0.5);
+
+			div.keypoint, div.image {
+				margin-bottom: 0;
+			}
+		}
+
+		> header.listing-item-header {
+			flex: 0 0 35%;
+			max-width: 35%;
+
+			h1, h2, h3, h4, h5, h6, p {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				font-size: 1rem;
+				margin-bottom: 0;
+			}
+
+			p {
+				font-size: $small-font-size;
+				margin-bottom: 0;
+			}
+
+			&.listing-item-header--narrow {
+				flex: 0 0 30%;
+				max-width: 30%;
+			}
+
+			&.listing-item-header--wide {
+				flex: 0 0 40%;
+				max-width: 40%;
+			}
+		}
+
+		> ul.listing-item-meta {
+			display: flex;
+			flex: 1;
+			list-style: none;
+			margin-left: ($grid-gutter * -0.5);
+			padding-left: $grid-gutter;
+
+			> li.listing-item-meta-col {
+				padding-left: ($grid-gutter * 0.5);
+				width: 7.2rem;
+				
+				span.listing-item-meta-col-key, span.listing-item-meta-col-value {
+					display: block;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+
+				span.listing-item-meta-col-key {
+					color: $fg-bold-color;
+					display: block;
+					font-size: $small-font-size;
+					font-weight: $bold-font-weight;
+				}
+
+				&.listing-item-meta-col--wide {
+					width: 9.6rem;
+				}
+
+				&.listing-item-meta-col--narrow {
+					width: 4.8rem;
+				}
+			}
+		}
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		&:last-child {
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+	}
+
+	@include breakpoint('medium') {
+
+		> li.listing-item > header.listing-item-header {
+			flex: 0 0 25%;
+			max-width: 25%;
+
+			&.listing-item-header--narrow {
+				flex: 0 0 20%;
+				max-width: 20%;
+			}
+
+			&.listing-item-header--wide {
+				flex: 0 0 30%;
+				max-width: 30%;
+			}
+		}
+	}
+
+	@include breakpoint('small') {
+
+		> li.listing-item {
+			display: block;
+
+			> div.listing-item-thumbnail {
+				display: none;
+			}
+
+			> header.listing-item-header {
+				margin-bottom: ($box-padding * 0.5);
+				max-width: 100%;
+
+				@for $i from 2 through $grid-columns {
+					&.listing-item-header--1of#{$i} {
+						max-width: 100%;
+					}
+				}
+			}
+
+			> ul.listing-item-meta {
+				display: block;
+				margin-bottom: ($box-padding * 0.5);
+				margin-left: 0;
+				padding-left: 0;
+
+				> li.listing-item-meta-col {
+					border-bottom: 1px dashed $border-color;
+					display: flex;
+					padding: 0.5rem 0;
+					width: 100%;
+
+					span.listing-item-meta-col-key {
+						flex: 1;
+						font-size: $normal-font-size;
+					}
+
+					&:last-child {
+						border-bottom: none;
+					}
+
+					&.listing-item-meta-col--wide, &.listing-item-meta-col--narrow {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Listing component extensions */
+ul.listing {
+}
