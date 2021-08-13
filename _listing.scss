@@ -13,7 +13,7 @@ ul.listing {
 		> div.listing-item-thumbnail {
 			padding-right: ($grid-gutter * 0.5);
 
-			div.keypoint, div.image {
+			div.keypoint, div.image, a.image {
 				margin-bottom: 0;
 			}
 		}
@@ -49,36 +49,36 @@ ul.listing {
 			}
 		}
 
-		> ul.listing-item-meta {
+		> ul.listing-item-meta-list {
 			display: flex;
 			flex: 1;
 			list-style: none;
 			margin-left: ($grid-gutter * -0.5);
 			padding-left: $grid-gutter;
 
-			> li.listing-item-meta-col {
+			> li {
 				padding-left: ($grid-gutter * 0.5);
 				width: 7.2rem;
 				
-				span.listing-item-meta-col-key, span.listing-item-meta-col-value {
+				span.listing-item-meta-key, span.listing-item-meta-value {
 					display: block;
 					overflow: hidden;
 					text-overflow: ellipsis;
 					white-space: nowrap;
 				}
 
-				span.listing-item-meta-col-key {
+				span.listing-item-meta-key {
 					color: $fg-bold-color;
 					display: block;
 					font-size: $small-font-size;
 					font-weight: $bold-font-weight;
 				}
 
-				&.listing-item-meta-col--wide {
+				&.listing-item-meta-list-item.listing-item-meta-list-item--wide {
 					width: 9.6rem;
 				}
 
-				&.listing-item-meta-col--narrow {
+				&.listing-item-meta-list-item.listing-item-meta-list-item--narrow {
 					width: 4.8rem;
 				}
 			}
@@ -132,19 +132,19 @@ ul.listing {
 				}
 			}
 
-			> ul.listing-item-meta {
+			> ul.listing-item-meta-list {
 				display: block;
 				margin-bottom: ($box-padding * 0.5);
 				margin-left: 0;
 				padding-left: 0;
 
-				> li.listing-item-meta-col {
+				> li {
 					border-bottom: 1px dashed $border-color;
 					display: flex;
 					padding: 0.5rem 0;
 					width: 100%;
 
-					span.listing-item-meta-col-key {
+					span.listing-item-meta-key {
 						flex: 1;
 						font-size: $normal-font-size;
 					}
@@ -153,7 +153,7 @@ ul.listing {
 						border-bottom: none;
 					}
 
-					&.listing-item-meta-col--wide, &.listing-item-meta-col--narrow {
+					&.listing-item-meta-list-item.listing-item-meta-list-item--wide, &.listing-item-meta-list-item.listing-item-meta-list-item--narrow {
 						width: 100%;
 					}
 				}

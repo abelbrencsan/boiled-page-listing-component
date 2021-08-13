@@ -20,13 +20,12 @@ Class name | Description | Example
 `listing-item-header` | Applies a header with a heading and a subheading inside listing item. | `<header class="listing-item-header"></header>`
 `listing-item-header--wide` | Sets listing item header wider. | `<header class="listing-item-header listing-item-header--wide"></header>`
 `listing-item-header--narrow` | Sets listing item header narrower. | `<header class="listing-item-header listing-item-header--narrow"></header>`
-`listing-item-meta` | Applies a meta list inside listing item. | `<ul class="listing-item-meta"></ul>`
-`listing-item-meta-col` | Applies a column inside meta list. | `<li class="listing-item-meta-col"></li>`
-`listing-item-meta-col--wide` | Sets meta list column wider. | `<li class="listing-item-meta-col listing-item-meta-col--wide"></li>`
-`listing-item-meta-col--narrow` | Sets meta list column narrower. | `<li class="listing-item-meta-col listing-item-meta-col--narrow"></li>`
-`listing-item-meta-col-key` | Applies a key inside meta list column. | `<span class="listing-item-meta-col-key"></span>`
-`listing-item-meta-col-value` | Applies a value inside meta list column. | `<span class="listing-item-meta-col-value"></span>`
-`listing-item-actions` | Applies a list of actions inside listing item. | `<ul class="listing-item-actions"></ul>`
+`listing-item-meta` | Applies a meta list inside listing item. | `<ul class="listing-item-meta-list"></ul>`
+`listing-item-meta-list-item--wide` | Sets meta list item wider. | `<li class="isting-item-meta-list-item isting-item-meta-list-item--wide"></li>`
+`isting-item-meta-list-item--narrow` | Sets meta list item narrower. | `<li class="isting-item-meta-list-item isting-item-meta-list-item--narrow"></li>`
+`listing-item-meta-key` | Applies a key inside meta list item. | `<span class="listing-item-meta-key"></span>`
+`listing-item-meta-value` | Applies a value inside meta list item. | `<span class="listing-item-meta-value"></span>`
+`listing-item-action-list` | Applies a list of actions inside listing item. Use grid component for alignment. | `<ul class="listing-item-action-list grid"></ul>`
 
 ### Examples
 
@@ -44,21 +43,21 @@ The following example shows a listing with keypoints inside thumbnails.
       <h3>Animal Farm</h3>
       <p>Book by George Orwell</p>
     </header>
-    <ul class="listing-item-meta">
-      <li class="listing-item-meta-col">
-        <span class="listing-item-meta-col-key">Price</span>
-        <span class="listing-item-meta-col-value">$5.69</span>
+    <ul class="listing-item-meta-list">
+      <li>
+        <span class="listing-item-meta-key">Price</span>
+        <span class="listing-item-meta-value">$5.69</span>
       </li>
-      <li class="listing-item-meta-col">
-        <span class="listing-item-meta-col-key">Condition</span>
-        <span class="listing-item-meta-col-value">Very Good</span>
+      <li>
+        <span class="listing-item-meta-key">Condition</span>
+        <span class="listing-item-meta-value">Very Good</span>
       </li>
     </ul>
-    <ul class="listing-item-actions button-group-list grid">
-      <li class="button-group-list-item grid-col grid-col--small--fit">
+    <ul class="listing-item-action-list button-group-list grid">
+      <li class="grid-col grid-col--small--fit">
         <button type="button" class="button button--fit">Edit</button>
       </li>
-      <li class="button-group-list-item grid-col grid-col--small--fit">
+      <li class="grid-col grid-col--small--fit">
         <button type="button" class="button button--fit button--badge">Delete</button>
       </li>
     </ul>
@@ -71,21 +70,21 @@ The following example shows a listing with keypoints inside thumbnails.
       <h3>Of Mice and Men</h3>
       <p>Book by John Steinbeck</p>
     </header>
-    <ul class="listing-item-meta">
-      <li class="listing-item-meta-col">
-        <span class="listing-item-meta-col-key">Price</span>
-        <span class="listing-item-meta-col-value">$8.59</span>
+    <ul class="listing-item-meta-list">
+      <li>
+        <span class="listing-item-meta-key">Price</span>
+        <span class="listing-item-meta-value">$8.59</span>
       </li>
-      <li class="listing-item-meta-col">
-        <span class="listing-item-meta-col-key">Condition</span>
-        <span class="listing-item-meta-col-value">Like New</span>
+      <li>
+        <span class="listing-item-meta-key">Condition</span>
+        <span class="listing-item-meta-value">Like New</span>
       </li>
     </ul>
-    <ul class="listing-item-actions button-group-list grid">
-      <li class="button-group-list-item grid-col grid-col--small--fit">
+    <ul class="listing-item-action-list button-group-list grid">
+      <li class="grid-col grid-col--small--fit">
         <button type="button" class="button button--fit">Edit</button>
       </li>
-      <li class="button-group-list-item grid-col grid-col--small--fit">
+      <li class="grid-col grid-col--small--fit">
         <button type="button" class="button button--fit button--badge">Delete</button>
       </li>
     </ul>
@@ -98,21 +97,21 @@ The following example shows a listing with keypoints inside thumbnails.
       <h3>Goodnight Moon</h3>
       <p>Book by Margaret Wise Brown</p>
     </header>
-    <ul class="listing-item-meta">
-      <li class="listing-item-meta-col">
-        <span class="listing-item-meta-col-key">Price</span>
-        <span class="listing-item-meta-col-value">$4.69</span>
+    <ul class="listing-item-meta-list">
+      <li>
+        <span class="listing-item-meta-key">Price</span>
+        <span class="listing-item-meta-value">$4.69</span>
       </li>
-      <li class="listing-item-meta-col">
-        <span class="listing-item-meta-col-key">Condition</span>
-        <span class="listing-item-meta-col-value">Very Good</span>
+      <li>
+        <span class="listing-item-meta-key">Condition</span>
+        <span class="listing-item-meta-value">Very Good</span>
       </li>
     </ul>
-    <ul class="listing-item-actions button-group-list grid">
-      <li class="button-group-list-item grid-col grid-col--small--fit">
+    <ul class="listing-item-action-list button-group-list grid">
+      <li class="grid-col grid-col--small--fit">
         <button type="button" class="button button--fit">Edit</button>
       </li>
-      <li class="button-group-list-item grid-col grid-col--small--fit">
+      <li class="grid-col grid-col--small--fit">
         <button type="button" class="button button--fit button--badge">Delete</button>
       </li>
     </ul>
@@ -125,21 +124,21 @@ The following example shows a listing with keypoints inside thumbnails.
       <h3>Green Eggs and Ham</h3>
       <p>Book by Dr. Seuss</p>
     </header>
-    <ul class="listing-item-meta">
-      <li class="listing-item-meta-col">
-        <span class="listing-item-meta-col-key">Price</span>
-        <span class="listing-item-meta-col-value">$6.79</span>
+    <ul class="listing-item-meta-list">
+      <li>
+        <span class="listing-item-meta-key">Price</span>
+        <span class="listing-item-meta-value">$6.79</span>
       </li>
-      <li class="listing-item-meta-col">
-        <span class="listing-item-meta-col-key">Condition</span>
-        <span class="listing-item-meta-col-value">Good</span>
+      <li>
+        <span class="listing-item-meta-key">Condition</span>
+        <span class="listing-item-meta-value">Good</span>
       </li>
     </ul>
-    <ul class="listing-item-actions button-group-list grid">
-      <li class="button-group-list-item grid-col grid-col--small--fit">
+    <ul class="listing-item-action-list button-group-list grid">
+      <li class="grid-col grid-col--small--fit">
         <button type="button" class="button button--fit">Edit</button>
       </li>
-      <li class="button-group-list-item grid-col grid-col--small--fit">
+      <li class="grid-col grid-col--small--fit">
         <button type="button" class="button button--fit button--badge">Delete</button>
       </li>
     </ul>
